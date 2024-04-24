@@ -1,0 +1,63 @@
+@use "./variables" as *;
+@use "./library/mixins/mixins" as *;
+
+// Map::
+/*
+  [1]- vans-page
+  [2]- vans-card
+  [3]- responsive
+*/
+/*------start: [1] vans-page--------*/
+
+/*------end: [1] vans-page--------*/
+/*------start: [2] van-card--------*/
+
+.back-btn {
+  color: $white;
+  background-color: $alt-font-color;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 10px 20px 10px 30px;
+  border-radius: 6px;
+  position: relative;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    background-color: $black;
+    i {
+      left: 10px;
+    }
+  }
+}
+
+// fav-icon:
+.fav-icon {
+  svg {
+    font-size: 24px;
+    transition: 0s;
+  }
+  &.fav {
+    color: $gold;
+  }
+  &:hover {
+    color: $gold;
+  }
+}
+
+// stars:
+.stars {
+  display: flex;
+  font-size: 18px;
+  gap: 4px;
+  i {
+    transition: 0s;
+  }
+  &:hover i {
+    color: $gold;
+    animation: icon-beat 0.8s linear infinite;
+  }
+}

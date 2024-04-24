@@ -1,0 +1,109 @@
+@use "../variables" as *;
+
+// font-size, margin:
+// @for $i from 5 through 50 {
+//   .fs-#{$i} {
+//     font-size: #{$i}px;
+//   }
+//   .mt-#{$i} {
+//     margin-top: #{$i}px;
+//   }
+//   .mr-#{$i} {
+//     margin-right: #{$i}px;
+//   }
+//   .mb-#{$i} {
+//     margin-bottom: #{$i}px;
+//   }
+//   .ml-#{$i} {
+//     margin-left: #{$i}px;
+//   }
+// }
+
+// width by percent:
+// @for $i from 5 through 100 {
+//   $i: $i + 5;
+//   .wd-#{$i} {
+//     width: percentage($i / 100);
+//   }
+// }
+
+// buttons:
+// .btn {
+//   color: $alt-widget-bg;
+//   padding: 4px 10px;
+//   border-radius: 6px;
+//   border: none;
+// }
+// .sm-btn {
+//   color: $alt-widget-bg;
+//   padding: 2px 5px;
+//   border-radius: 6px;
+//   border: none;
+// }
+
+// colors:
+$colors: (
+  "main": $basic,
+  "black": $black,
+  "alt-black": $alt-black,
+  "white": $white,
+  "orange": $orange,
+  "green": $green,
+  "gold": $gold
+);
+
+@each $name, $color in $colors {
+  // background-color:
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  // color:
+  .c-#{$name} {
+    color: $color;
+  }
+  // button with background-color:
+  // .btn-#{$name} {
+  //   color: $alt-widget-bg;
+  //   background-color: $color;
+  //   padding: 4px 10px;
+  //   border-radius: 6px;
+  //   border: none;
+  // }
+}
+// .btn-grey {
+//   color: $main-fc;
+//   background-color: $alt-grey;
+//   padding: 4px 10px;
+//   border-radius: 6px;
+//   border: none;
+// }
+
+// .widget {
+//   background-color: $alt-widget-bg;
+//   padding: 20px;
+//   border-radius: 10px;
+//   position: relative;
+// }
+// .widget-info {
+//   margin: 0 0 20px;
+//   p {
+//     color: $alt-fc;
+//     font-size: 15px;
+//     margin: 10px 0 0px;
+//   }
+// }
+
+// // flex:
+// .flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// // txt - transform:
+// .txt-lower {
+//   text-transform: lowercase;
+// }
+// .txt-caps {
+//   text-transform: capitalize;
+// }
