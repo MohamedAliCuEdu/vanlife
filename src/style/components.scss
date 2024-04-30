@@ -17,19 +17,20 @@
   background-color: $alt-font-color;
   font-size: 18px;
   text-transform: capitalize;
-  padding: 10px 20px 10px 30px;
+  padding: 10px 20px 10px 35px;
   border-radius: 6px;
   position: relative;
-  i {
+  svg {
     position: absolute;
     top: 50%;
-    left: 15px;
+    left: 10px;
     transform: translateY(-50%);
+    transition: 0.2s;
   }
   &:hover {
     background-color: $black;
-    i {
-      left: 10px;
+    svg {
+      left: 5px;
     }
   }
 }
@@ -51,13 +52,31 @@
 // stars:
 .stars {
   display: flex;
-  font-size: 18px;
   gap: 4px;
-  i {
+  svg {
+    font-size: 18px;
     transition: 0s;
   }
-  &:hover i {
+  &:hover svg {
     color: $gold;
     animation: icon-beat 0.8s linear infinite;
+  }
+  &.rated {
+    svg {
+      color: $gold;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .back-btn {
+    font-size: 14px;
+    padding: 10px 10px 10px 25px;
+  }
+  .fav-icon,
+  .stars {
+    svg {
+      font-size: 18px;
+    }
   }
 }

@@ -4,3 +4,4 @@
 3. filters setting => show filters...
 4. export component syntax
 5. max van price dynamic
+6. rating stars

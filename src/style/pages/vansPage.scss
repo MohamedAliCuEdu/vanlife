@@ -58,9 +58,10 @@
           }
         }
         .price-filter {
-          min-width: 200px;
+          width: 270px;
           display: flex;
           align-items: center;
+          justify-content: space-between;
           background-color: $alt-widget-bg;
           padding: 10px;
           border-radius: 6px;
@@ -189,7 +190,7 @@
         margin-bottom: 15px;
       }
       .price-filter {
-        width: 100%;
+        width: fit-content;
         justify-content: center;
         .inputs {
           width: 100%;
@@ -210,26 +211,29 @@
     & > h1 {
       font-size: 22px;
     }
-    .vans-list {
-      .filters .row-1 .price-filter .inputs {
-        gap: 0;
+  }
+  .filters .row-1 .price-filter {
+    flex-direction: column;
+    .inputs {
+      gap: 0;
+    }
+  }
+  .vans-list {
+    display: block;
+    .van-card {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      a img {
+        width: 120px;
       }
-      display: block;
-      .van-card {
+      .details {
+        flex: 1;
         display: flex;
-        gap: 30px;
-        margin-bottom: 20px;
-        a img {
-          width: 120px;
-        }
-        .details {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .top {
-            margin-bottom: 20px;
-          }
+        flex-direction: column;
+        justify-content: center;
+        .top {
+          margin-bottom: 20px;
         }
       }
     }

@@ -1,5 +1,7 @@
 // react component:
 import React, { useState } from "react";
+import { FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 function RatingStars() {
   let arrOfStars = [
@@ -9,26 +11,36 @@ function RatingStars() {
     { id: 4, solid: false },
     { id: 5, solid: false },
   ];
+
   const [stars, setStars] = useState(arrOfStars);
-  function handleRating(e) {
-    setStars(
-      arrOfStars.map((prev) =>
-        prev.id <= e ? { ...prev, solid: !prev.solid } : prev
-      )
-    );
+  function handleRating(id) {
+    if (id === 1 && stars[0].solid === true) {
+      setStars(arrOfStars);
+    } else {
+      setStars(
+        arrOfStars.map((prev) =>
+          prev.id <= id ? { ...prev, solid: !prev.solid } : prev
+        )
+      );
+    }
   }
-  
+
+  // checking if user rate the van:
+  let rated = stars.find((e) => e.solid === true);
+
   return (
-    <div className="stars">
+    <div className={`stars ${rated ? "rated" : ""}`}>
       {stars.map((ele) => {
         const { id, solid } = ele;
         return (
-          <i
-            id={id}
+          <span
             key={id}
-            className={`${solid ? "fa-solid c-gold" : "fa-regular"} fa-star`}
+            id={`star-${id}`}
+            className={solid ? "filled" : ""}
             onClick={() => handleRating(id)}
-          ></i>
+          >
+            {solid ? <FaStar /> : <FaRegStar />}
+          </span>
         );
       })}
     </div>

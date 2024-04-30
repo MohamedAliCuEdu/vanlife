@@ -10,61 +10,27 @@ body {
   grid-template-rows: 1fr auto;
 }
 .page-content {
-  margin: 65px 0 0; // margin equal to [nav_height]
+  margin: 65px 0 0; // margin equal or less than [nav_height]
 }
-h1, h2, h3, h4, h5, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   color: $main-font-color;
 }
-p{
+p {
   line-height: 1.5;
 }
 
-// classes
-.back-btn {
-  color: $white;
-  background-color: $alt-font-color;
-  font-size: 18px;
-  text-transform: capitalize;
-  padding: 10px 20px 10px 30px;
-  border-radius: 6px;
-  position: relative;
-  i {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-  }
-  &:hover {
-    background-color: $black;
-    i {
-      left: 10px;
-    }
-  }
+// van type button background
+.luxury {
+  background-color: $main-font-color;
 }
-
-// fav-icon:
-.fav-icon {
-  font-size: 25px;
-  transition: 0s;
-  &:hover {
-    color: $gold;
-  }
-  &.fav {
-    color: $gold;
-    font-weight: 900;
-  }
+.rugged {
+  background-color: $green;
 }
-
-// stars:
-.stars{
-  display: flex;
-  font-size: 18px;
-  gap: 4px;
-  i{
-    transition: 0s;
-  }
-  &:hover i{
-    color: $gold;
-    animation: icon-beat 0.8s linear infinite;
-  }
+.simple {
+  background-color: $orange;
 }

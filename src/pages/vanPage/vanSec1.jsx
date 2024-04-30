@@ -8,29 +8,29 @@ import { VanPageContext } from "./vanPage";
 
 function VanSec1() {
 
-  const { vanData, handleImgVeiw } = useContext(VanPageContext);
+  const { vanData, handleImgView } = useContext(VanPageContext);
   const {name, imgUrl} = vanData;
-console.log(vanData)
+
   return (
-    <div className="left">
+    <div className="sec-1">
       <div className="img-container">
+        <img src={imgUrl} alt={name} />
         <div className="img-options">
-          <button className="veiw" onClick={handleImgVeiw} title="veiw image.">
+          <button className="view" onClick={handleImgView} title="view image.">
             <FaExpand />
           </button>
           <a href={imgUrl} download={name} title="download image">
             <FiDownload />
           </a>
         </div>
-        <img src={imgUrl} alt={name} />
       </div>
       <div className="actions">
         <div className="rating">
-          <span>rating:</span>
+          <h3>rating:</h3>
           <RatingStars />
         </div>
         <div className="addfav">
-          <span>add to favourites:</span>
+          <h3>add to favourites:</h3>
           <FavIcon />
         </div>
       </div>

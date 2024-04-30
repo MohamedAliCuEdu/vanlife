@@ -3,7 +3,6 @@ import React, {
   useState,
   useRef,
   useEffect,
-  useContext,
   createContext,
 } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
@@ -44,18 +43,16 @@ function VanPage() {
     loadData();
   }, [param.item]);
 
-  /* close || open Image veiw:
-    - make reference for full-img div
-    - make function to handle open & close img-view
-  */
-  const veiwId = useRef();
-  function handleImgVeiw() {
-    veiwId.current.classList.toggle("veiw");
-    document.querySelector(".root").classList.toggle("fit-height");
+  // close || open Image veiw:
+  const fullViewId = useRef();
+  function handleImgView() {
+    fullViewId.current.classList.toggle("view");
+    document.querySelector("#root").classList.toggle("fit-height");
+    
   }
 
   return (
-    <VanPageContext.Provider value={{ vanData, handleImgVeiw, veiwId }}>
+    <VanPageContext.Provider value={{ vanData, handleImgView, fullViewId }}>
       {loading ? (
         <Loading />
       ) : fetchError ? (
@@ -76,7 +73,7 @@ function VanPage() {
               <VanSec2 />
             </section>
           </div>
-          <FullVeiw />
+          <FullVeiw/>
         </main>
       )}
     </VanPageContext.Provider>
