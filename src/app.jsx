@@ -10,16 +10,16 @@ import "./style/components.scss";
 // layouts & pages:
 import HomePage from "./pages/homePage";
 import Layouts from "./layouts/layouts";
-// import LoginPage from "./pages/loginPage";
+import LoginPage from "./pages/loginPage";
 import AboutPage from "./pages/aboutPage";
 import ErrorPage from "./pages/errorPage";
 
 // page: host
-// import HostLayout from "./pages/host/host-layout";
-// import HostDashboard from "./pages/host/host-dashboard";
-// import HostVans from "./pages/host/host-vans";
-// import HostIncome from "./pages/host/host-income";
-// import HostReveiws from "./pages/host/host-reviews";
+import HostLayout from "./pages/host/host-layout";
+import Dashboard from "./pages/host/dashboard";
+import HostVans from "./pages/host/host-vans";
+import HostIncome from "./pages/host/host-income";
+import HostReveiws from "./pages/host/host-reviews";
 
 // // page: vans
 import Vans from "./pages/vansPage/vansPage";
@@ -34,15 +34,14 @@ function App() {
           <Route path="vans" element={<Vans />}>
             <Route path="?type"></Route>
           </Route>
-            <Route path="vans/:id" element={<VanDetails />}></Route>
-          {/* 
+          <Route path="vans/:id" element={<VanDetails />}></Route>
           <Route path="host" element={<HostLayout />}>
-          <Route path="vans" element={<HostVans />}></Route>
-            <Route index element={<HostDashboard />} end></Route>
+            <Route index element={<Dashboard />} end></Route>
+            <Route path="vans" element={<HostVans />}></Route>
             <Route path="income" element={<HostIncome />}></Route>
             <Route path="reviews" element={<HostReveiws />}></Route>
           </Route>
-        <Route path="login" element={<LoginPage />}></Route> */}
+          <Route path="login" element={<LoginPage />}></Route>
           <Route path="about" element={<AboutPage />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Route>

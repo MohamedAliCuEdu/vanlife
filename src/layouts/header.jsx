@@ -9,7 +9,7 @@ function Header() {
     <header className="header">
       <div className="container">
         <Link className="logo" to="/">
-          <img src="logo.png" alt="#vanlife " />
+          <img src="logo.png" alt="#vanlife" />
         </Link>
         <nav>
           <NavLink to="host" title="Host page">

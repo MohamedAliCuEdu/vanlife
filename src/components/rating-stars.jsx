@@ -13,8 +13,9 @@ function RatingStars() {
   ];
 
   const [stars, setStars] = useState(arrOfStars);
+  const solidStarsCount = stars.filter((e) => e.solid);
   function handleRating(id) {
-    if (id === 1 && stars[0].solid === true) {
+    if (id === 1 && solidStarsCount.length === 1) {
       setStars(arrOfStars);
     } else {
       setStars(

@@ -211,29 +211,42 @@
     & > h1 {
       font-size: 22px;
     }
-  }
-  .filters .row-1 .price-filter {
-    flex-direction: column;
-    .inputs {
-      gap: 0;
-    }
-  }
-  .vans-list {
-    display: block;
-    .van-card {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 20px;
-      a img {
-        width: 120px;
+
+    .filters .row-1 .price-filter {
+      flex-direction: column;
+      .inputs {
+        gap: 0;
       }
-      .details {
-        flex: 1;
+    }
+    .vans-list {
+      display: block;
+      .van-card {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .top {
-          margin-bottom: 20px;
+        gap: 30px;
+        margin-bottom: 15px;
+        a img {
+          width: 100px;
+        }
+        .details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 10px 0;
+          .top {
+            .name{
+              font-size: 16px;
+            }
+          }
+          .bottom{
+            .type{
+              font-size: 13px;
+              padding: 8px 14px;
+            }
+            .price{
+              font-size: 14px;
+            }
+          }
         }
       }
     }

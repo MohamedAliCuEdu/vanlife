@@ -170,9 +170,11 @@
 .full-view {
   display: none;
   @include overlay(rgba(0, 0, 0, 0.5));
+  height: 100vh;
   align-items: center;
   justify-content: center;
   z-index: 5;
+  position: fixed;
   &.view {
     display: flex;
   }
@@ -187,11 +189,11 @@
       background-color: $alt-widget-bg;
       text-transform: capitalize;
       font-weight: 600;
-      font-size: 22px;
-      padding: 5px 10px;
+      font-size: 20px;
+      padding: 5px 8px;
       border-radius: 50%;
       position: absolute;
-      bottom: -45px;
+      bottom: -30px;
       right: 50%;
       transform: translateX(50%);
     }
@@ -218,7 +220,7 @@
       }
       .actions {
         padding: 10px;
-        h3{
+        h3 {
           font-size: 16px;
         }
         .rating {
@@ -251,6 +253,12 @@
       .points ul {
         padding: 0 0 0 20px;
       }
+    }
+  }
+  .full-view {
+    .container .close-btn {
+      bottom: -15px;
+      font-size: 14px;
     }
   }
 }

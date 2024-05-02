@@ -5,11 +5,12 @@ body {
   text-transform: capitalize;
 }
 #root {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  grid-template-rows: 1fr auto;
 }
 .page-content {
+  flex: 1;
   margin: 65px 0 0; // margin equal or less than [nav_height]
 }
 h1,

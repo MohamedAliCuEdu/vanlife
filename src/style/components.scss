@@ -58,12 +58,12 @@
     transition: 0s;
   }
   &:hover svg {
-    color: $gold;
+    color: #ff8c38;
     animation: icon-beat 0.8s linear infinite;
   }
   &.rated {
     svg {
-      color: $gold;
+      color: #ff8c38;
     }
   }
 }
